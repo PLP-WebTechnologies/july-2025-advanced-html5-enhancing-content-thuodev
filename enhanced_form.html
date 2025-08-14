@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enhanced Form — Samson Thuo</title>
+    <link rel="stylesheet" href="style .css">
+</head>
+<body>
+
+<header>
+    <h1>Enhanced HTML5 Form</h1>
+    <p>Lists • Tables • Media • Accessible, validated form</p>
+</header>
+
+<main>
+
+    <!-- Lists -->
+    <section aria-labelledby="benefits">
+        <h2 id="benefits">Why use HTML5 forms</h2>
+        <ul>
+            <li>Native validation without JavaScript</li>
+            <li>Accessible semantics with labels &amp; fieldsets</li>
+            <li>Responsive controls and media support</li>
+        </ul>
+    </section>
+
+    <!-- Table -->
+    <section aria-labelledby="sample-table">
+        <h2 id="sample-table">Feature matrix</h2>
+        <table>
+            <caption>Form features and availability</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Feature</th>
+                    <th scope="col">Available</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Native validation</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>File uploads</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Media -->
+    <section aria-labelledby="media">
+        <h2 id="media">Media examples</h2>
+
+        <figure>
+            <img src="https://via.placeholder.com/600x240" alt="Placeholder demo image">
+            <figcaption>Example image with descriptive alt text.</figcaption>
+        </figure>
+
+        <figure>
+            <video controls width="600" preload="metadata">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser doesn't support video playback.
+            </video>
+            <figcaption>Sample video demonstration (controls enabled).</figcaption>
+        </figure>
+    </section>
+
+    <!-- Form -->
+    <section aria-labelledby="registration">
+        <h2 id="registration">Registration Form</h2>
+        <form action="#" method="POST">
+
+            <!-- Personal Info -->
+            <fieldset>
+                <legend>Personal information</legend>
+
+                <label for="fullname">Full name</label>
+                <input id="fullname" name="fullname" type="text" placeholder="Samson Thuo" required autocomplete="name" minlength="3">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+254712345678"
+                    pattern="^\+?\d{7,15}$"
+                    title="Enter digits, optionally starting with + and include country code" required>
+
+                <label for="dob">Date of birth</label>
+                <input id="dob" name="dob" type="date" required max="2007-08-14">
+                <small id="dob-note">Must be at least 18 years old.</small>
+            </fieldset>
+
+            <!-- Account Info -->
+            <fieldset>
+                <legend>Account</legend>
+
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="username123" required autocomplete="username" minlength="4">
+
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" required minlength="8" aria-describedby="pw-help">
+                <small id="pw-help">Minimum 8 characters.</small>
+
+                <label for="regid">Registration ID</label>
+                <input id="regid" name="regid" type="text" value="REG-2025-001" readonly>
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+
+                <label for="role">Role</label>
+                <select id="role" name="role" required>
+                    <option value="">Choose role</option>
+                    <option value="student">Student</option>
+                    <option value="dev">Developer</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <p>Contact method</p>
+                <input type="radio" id="pref-email" name="contact" value="email" required>
+                <label for="pref-email">Email</label>
+
+                <input type="radio" id="pref-phone" name="contact" value="phone">
+                <label for="pref-phone">Phone</label>
+
+                <p>Skills</p>
+                <input type="checkbox" id="skill-html" name="skills" value="html">
+                <label for="skill-html">HTML</label>
+
+                <input type="checkbox" id="skill-css" name="skills" value="css">
+                <label for="skill-css">CSS</label>
+
+                <input type="checkbox" id="skill-js" name="skills" value="js">
+                <label for="skill-js">JavaScript</label>
+            </fieldset>
+
+            <!-- Extras -->
+            <fieldset>
+                <legend>Extras</legend>
+
+                <label for="bio">Short bio</label>
+                <textarea id="bio" name="bio" rows="4" maxlength="300" placeholder="Tell us briefly about yourself..."></textarea>
+
+                <label for="cv">Upload CV (PDF or DOCX)</label>
+                <input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx">
+
+                <div>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </fieldset>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <small>&copy; 2025 — Samson Thuo</small>
+</footer>
+
+</body>
+</html>
